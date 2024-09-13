@@ -1,0 +1,64 @@
+
+<header>
+    <a [routerLink]="['/home']"><img src="../../assets/factorix.png" alt=""></a>
+    <nav>
+        <ul>
+            <a [routerLink]="['/home']"><li>Home</li></a>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>New & Popular</li>
+            <li>My List</li>
+        </ul>
+    </nav>
+</header>
+<div class="movieContainer">
+    <div class="closeButton">
+        <a [routerLink]="['/home']"><img src="../../assets/close.png" alt="" class="close"></a>
+    </div>
+    <div class="movieDetails">
+        <div class="movieScene">
+            <img [src]="movies.scene" alt={{movies.title}} class="scene">
+            <div class="textDetails">
+                <div class="titlePlay">
+                    <h2 class="title">{{movies.title}}</h2>
+                    <div class="buttonsMovie">
+                        <img src="../../assets/play.png" alt="Play Button" id="playButton">
+                        <div class="roundButtons">
+                            <img src="../../assets/add.png" alt="Add Button">
+                        </div>
+                        <div class="roundButtons">
+                            <img src="../../assets/like.png" alt="Like Button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="moreDetails">
+            <div class="left">
+                <h1 class="newSeason">It's Official: Another Season Is Coming</h1>
+                <p class="synopsis">{{movies.synopsis}}</p>
+            </div>
+            <div class="right">
+                <p class="genre">
+                    <span class="label">Genres: </span> 
+                    <a href="#">{{movies.genres}}</a>
+                </p>
+                <p class="year">
+                    <span class="label">Year: </span> 
+                    <a href="#">{{movies.year}}</a>
+                </p>
+                <p class="people">
+                    <span class="label">Director: </span> 
+                    <a href="#">{{movies.director}}</a>
+                </p>
+                <p class="people">
+                    <span class="label">Cast: </span> 
+                    <a href="#">{{movies.actors}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

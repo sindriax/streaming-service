@@ -1,0 +1,105 @@
+:root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+}
+
+.profilesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    background-color: #141414;
+
+    .watchingText{
+        font-size: 3em;
+        font-weight: 500;
+        background-color: transparent;
+    }
+
+    button{
+        background-color: #141414;
+        margin-top: 2em;
+        border: #797979 0.10em solid;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.1em;
+    }
+
+    button:hover{
+        border: 1px solid white;
+    }
+
+    .manage{
+        background-color: #141414;
+        margin: 2em;
+        text-decoration: none;
+        color: #797979;
+        letter-spacing: 0.15em;
+        font-size: 1.25em;
+        font-weight: 500;
+    }
+
+}
+
+.profiles{
+    display: flex;
+    width: 50vw;
+    gap: 2vw;
+    justify-content: center;
+    background-color: transparent;
+
+    .singleProfile{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+            p{
+                margin-top: 2vh;
+                background-color: transparent;
+                color: #797979;
+                // font-weight: 550;
+                font-size: 1.1em;
+            }
+
+            a{
+                background-color: transparent;
+            }
+        
+            img{
+            width: 10vw;
+            background-color: transparent;
+            border-radius: 0.35em;
+            }
+    }
+}
+
+// button, img:hover{
+//     border: 1px solid white;
+// }
+
+
+button:hover > .manage{
+    color: white;
+}
+
+.profileLink:hover ~ .name{
+    color: white;
+}
+
+.profileLink:hover + .name{
+    color:white
+}
+
+img:hover{
+    // box-shadow: inset 1px 1px 1px 1px white;
+    outline: 2px white solid;
+}

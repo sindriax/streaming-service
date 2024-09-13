@@ -1,0 +1,189 @@
+header{
+    background-color: black;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    color: white;
+
+    img{
+        margin-top: 1.5vh;
+        margin-left: 4vw;
+        height: 6vh;
+    }
+
+    ul {
+        margin-top: 3vh;
+        margin-left: -15vw;
+        display: flex;
+        gap: 2vw;
+    }
+
+    li{
+        cursor: pointer;
+    }
+
+    li:hover{
+        text-decoration: underline;
+    }
+
+    a{
+        text-decoration: none;
+        color: white
+    }
+
+}
+
+.movieContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .closeButton{
+        width: 60vw;
+        display: flex;
+        justify-content: end;
+        }
+
+    .movieDetails{
+        color: white;
+        // border: 1px solid red;
+        display: grid;
+        grid-template-areas: 
+            "poster"
+            "textDetails";
+        justify-items: center;
+        gap: 20px;
+        width: 60vw;
+        position: relative;
+        
+        .movieScene {
+            width: 60vw;
+            grid-area: poster;
+            position: relative;
+            height: 70vh;
+            display: inline-block;
+        }
+        
+        .movieScene::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            display: inline-block;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.155) 0%, rgba(0, 0, 0, 0.954) 100%);
+        }
+        
+        .scene {
+            width: 60vw;
+            position: relative;
+            height: 70vh;
+        }
+        
+        .textDetails {
+            background-color: transparent;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            // border: 1px blue solid;
+        }
+        
+        .titlePlay {
+            width: 100%;
+            height: 25vh;
+            font-size: 4em;
+            top: 5em;
+            background-color: transparent;
+        }
+        
+        .title {
+            background-color: transparent;
+            margin-top: 0.35em;
+            margin-left: 0.15em;
+            margin-bottom: 0.2em;
+            font-weight: bold;
+        }
+        
+        .buttonsMovie {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            gap: 0.2em;
+        }
+        
+        #playButton {
+            height: 0.7em;
+            border-radius: 0.10em;
+            cursor: pointer;
+            margin-left: 0.25em;
+        }
+        
+        .roundButtons {
+            background-color: rgba(48, 47, 47, 0.664);
+            height: 0.65em;
+            width: 0.65em;
+            border: 2.5px solid rgba(255, 255, 255, 0.594);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .roundButtons img {
+            background-color: transparent;
+            height: 0.3em;
+        }
+        
+        .moreDetails{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3em;
+            
+            .left {
+                    grid-column: 1;
+                    gap:1em;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+            .right {
+                    grid-column: 2;
+                    gap:1em;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 0.5em;
+                }
+
+            .newSeason{
+                font-size: 1.5em;
+                font-weight: 600;
+                padding-top: 1em;
+                padding-bottom: 0.3em;
+            }
+
+            .label{
+                color: grey;
+                }
+
+            a{
+                color: white;
+                text-decoration: none;
+                line-height: 1.4em;
+                }
+                
+            a:hover{
+                text-decoration: underline;
+                }
+                
+            .synopsis{
+                line-height: 1.6em;
+                }
+        }
+    }    
+}

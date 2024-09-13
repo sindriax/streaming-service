@@ -1,0 +1,25 @@
+<div class="authPage">
+    <header>    
+        <a [routerLink]="['/home']">
+            <img src="../../assets/factorix.png" alt="" id="factorix">
+        </a>
+        <a [routerLink]="['/register']"><button>Sign Up</button></a>
+    </header>
+    <div class="login">
+        <div class="loginText">
+            <h2>Unlimited movies, TV shows, and more</h2>
+            <h3>Watch anywhere. Cancel anytime.</h3>
+            <p>Ready to watch? Sign in or create a new membership.</p>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="loginInputs">
+                <input type="email" placeholder="Email address" formControlName="email">
+                <input type="password" placeholder="Password"  formControlName="password">
+                <button type="submit">Sign In <span>></span></button>
+            </div>
+            <div class="signupLink">
+                <p>Don't have an account yet? </p><a [routerLink]="['/register']"> Get Started</a>
+            </div>
+            </form>
+    </div>
+</div>

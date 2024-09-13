@@ -1,0 +1,74 @@
+
+<header>
+    <a [routerLink]="['/home']"><img src="../../assets/factorix.png" alt="" id="factorix"></a>
+    <nav>
+        <ul>
+            <a [routerLink]="['/home']"><li>Home</li></a>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>New & Popular</li>
+            <li>My List</li>
+            <a [routerLink]="['/logout']"><button (click)="onLogout()">Sign Out</button></a>
+        </ul>
+    </nav>
+        <div class="navIcons">
+            <img src="../../assets/search.png" alt="">
+            <img src="../../assets/active.png" alt="">
+            <img src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-88wkdmjrorckekha.jpg" alt="" id="profilePic">
+        </div>
+    </header>
+<section class="videoBanner">
+    <video src="../../assets/silicon.mp4" autoplay id="background-video"></video>
+    <div class="videoText">
+        <h2>Silicon Valley</h2>
+        <div class="buttonsMovie">
+            <a [routerLink]="['/movies/3']">
+                <img src="../../assets/play.png" alt="Play Button" id="playButton">
+            </a>
+            <a [routerLink]="['/movies/3']">
+                <img src="../../assets/more.png" alt="More Info Button" id="moreButton">
+            </a>
+        </div>
+    </div>
+</section>
+<div class="movieOptions">
+    <p>We Think You'll Love These</p>
+<ul>
+    <div class="wrapper">
+        <section id="section1" class="slider">
+        <a href="#section1" class="arrowButton leftArrow" (click)="scrollLeft($event)">‹</a>
+        @for (movie of (movies | async) || []; track movie.id) {
+            <div class="item">
+                <a [routerLink]="['/movies', movie.id]">
+                    <img [src]="movie.poster" alt="{{movie.title}}">
+                </a>
+            </div>
+        }
+        <a href="#section1" class="arrowButton rightArrow" (click)="scrollRight($event)">›</a>
+        </section>
+    </div>
+</ul>
+</div>
+<!-- SLIDER -->
+<!-- 
+<section className="up-container" ref={sliderRef}>
+    <button
+      onClick={() => scroll(-1800)}
+      className="up-first-btn"
+      aria-label="Scroll left"
+    >
+      <img className="up-arrow" src={arrowLeft} alt="" />
+    </button>
+    <div className="up-slider-container">
+      {movies &&
+        movies.map((movie) => <UpcomingCard movie={movie} key={movie.id} />)}
+    </div>
+
+    <button
+      onClick={() => scroll(1800)}
+      className="up-second-btn"
+      aria-label="Scroll right"
+    >
+      <img className="up-arrow" src={arrowRight} alt="" />
+    </button>
+  </section> -->

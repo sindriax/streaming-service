@@ -1,0 +1,143 @@
+.authPage{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+}
+
+header{
+    background-color: transparent;  
+    height: 5vh;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        height: 8vh;
+        margin-top: 4em;
+        // margin-right: 3em;
+        margin-left: 4em;
+    }
+
+    button{
+        height: 6vh;
+        width: 7vw;
+        margin-top: 4em;
+        margin-right: 4em;
+        background-color: #DC1A28;
+        border-radius: 0.5em;
+        border: transparent;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1em;
+    }
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    gap: 2em;
+    // height: 40vh;
+
+    .registerText{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        p, h2, h3{
+            background-color: transparent;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+        
+        h3 {
+            font-size: 1rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        // width: 50vw;
+        width: 40vw;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+
+        .registerInputs{
+            background-color: transparent;
+            gap: 1em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input[type="email"] {
+                padding-left: 0.9em;
+            }
+            
+            input[type="password"] {
+                padding-left: 0.9em;
+            }
+
+            // input[type="name"] {
+            //     padding-left: 0.9em;
+            // }
+        
+        
+        input{
+            all: unset;
+            // background-color: rgba(0, 0, 0, 0.51);
+            border-radius: 0.5em;
+            height: 8vh;
+            border: rgb(103, 99, 99) 1px solid;
+            width: 50%;
+            font-size:1.2;
+        }
+    }
+
+    button{
+        // all: unset;
+        background-color: #DC1A28;
+        border-radius: 0.5em;
+        height: 7vh;
+        border: transparent;
+        cursor: pointer;
+        width: 40%;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5em;
+
+        span{
+            position: relative;
+            top: 0.07em;
+            left: 0.5em;
+            font-weight: normal;
+        }
+    }
+}
+}

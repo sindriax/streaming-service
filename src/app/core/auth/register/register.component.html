@@ -1,0 +1,22 @@
+<div class="authPage">
+    <header>    
+        <a [routerLink]="['/home']"><img src="../../assets/factorix.png" alt="" id="factorix"></a>
+        <a [routerLink]="['/login']"><button>Sign In</button></a>
+    </header>
+    <div class="register">
+        <div class="registerText">
+            <h2>Create a password to start your membership.</h2>
+            <h3>Just a few more steps and youre done!</h3>
+            <h3>We hate paperwork, too.</h3>
+        </div>
+            <form [formGroup]="registerForm" (ngSubmit)="submit()">
+                <div class="registerInputs">
+                <input type="email" formControlName="email" placeholder="Enter your email">
+                <input type="password" formControlName="password" placeholder="Add a password">
+                <!-- <input type="password" formControlName="confirmPassword" placeholder="Confirm your password">
+                <input type="name" formControlName="name" placeholder="Choose a name for your profile"> -->
+            </div>
+            <button type="submit">Get Started <span>></span></button>
+            </form>
+    </div>
+</div>
